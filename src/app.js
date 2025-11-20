@@ -8,7 +8,7 @@ import path from 'path'
 import ffmpeg from 'fluent-ffmpeg'
 
 
-const PORT = process.env.PORT ?? 300
+const PORT = process.env.PORT ?? 3008
 const clientId = process.env.CLIENT_ID ?? 1
 const urlN8n = process.env.URL ?? `https://n8n.soiteg.com/webhook/6d3a9233-d542-4d33-9b8f-39c5c99585cf`
 
