@@ -51,6 +51,8 @@ const welcomeFlow = addKeyword(EVENTS.WELCOME).addAction({ capture: false }, asy
             })
         })
         const data = await res.json()
+
+        console.log(data)
         if (data.limite) {
             await flowDynamic('Jo jo jo, lo siento, haz alcanzado el limite de mensajes por dia. 🎅');
             return endFlow();
