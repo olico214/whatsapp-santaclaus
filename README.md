@@ -11,13 +11,24 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente en tu entorno:
 * **pnpm** (Gestor de paquetes)
     * Si no lo tienes, instálalo con: `npm install -g pnpm`
 
+## ⚙️ Configuración (Variables de Entorno)
+
+Es necesario crear un archivo de configuración para conectar tu instancia de Baileys con tu n8n.
+
+1.  Crea un archivo llamado `.env` en la raíz del proyecto.
+2.  Copia y pega el siguiente contenido, sustituyendo los valores por los tuyos:
+
+```env
+PORT=3000
+URL=https://tu-n8n.com/webhook/tu-webhook-id
+
 ## 🚀 Instalación
 
 Sigue estos pasos para desplegar el proyecto en tu entorno local o servidor:
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone [https://github.com/olico214/whatsapp-santaclaus.git](https://github.com/olico214/whatsapp-santaclaus.git)
+    git clone https://github.com/olico214/whatsapp-santaclaus.git
     ```
 
 2.  **Ingresa al directorio del proyecto:**
@@ -30,13 +41,10 @@ Sigue estos pasos para desplegar el proyecto en tu entorno local o servidor:
     pnpm install
     ```
 
-## ⚙️ Configuración (Variables de Entorno)
+## ▶️ Ejecución
+assets/connect.png
 
-Es necesario crear un archivo de configuración para conectar tu instancia de Baileys con tu n8n.
+ Inicia el servicio con el siguiente comando:
+ http://localhost:3008/
 
-1.  Crea un archivo llamado `.env` en la raíz del proyecto.
-2.  Copia y pega el siguiente contenido, sustituyendo los valores por los tuyos:
-
-```env
-PORT=3000
-URL=https://tu-n8n.com/webhook/tu-webhook-id](https://tu-n8n.com/webhook/tu-webhook-id
+ leer el codigo QR desde tu whatsapp
