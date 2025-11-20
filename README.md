@@ -1,44 +1,42 @@
-<p align="center">
-  <a href="https://builderbot.vercel.app/">
-    <picture>
-      <img src="https://builderbot.vercel.app/assets/thumbnail-vector.png" height="80">
-    </picture>
-    <h2 align="center">BuilderBot</h2>
-  </a>
-</p>
+# WhatsApp SantaClaus 🎅🎄
 
+Aplicación modular para conectar **WhatsApp** (utilizando la librería Baileys) con flujos de automatización en **n8n**. Este servicio permite gestionar mensajes y reenviar eventos a través de webhooks.
 
+## 📋 Requisitos Previos
 
-<p align="center">
-  <a aria-label="NPM version" href="https://www.npmjs.com/package/@builderbot/bot">
-    <img alt="" src="https://img.shields.io/npm/v/@builderbot/bot?color=%2300c200&label=%40bot-whatsapp">
-  </a>
-  <a aria-label="Join the community on GitHub" href="https://link.codigoencasa.com/DISCORD">
-    <img alt="" src="https://img.shields.io/discord/915193197645402142?logo=discord">
-  </a>
-</p>
+Antes de comenzar, asegúrate de tener instalado lo siguiente en tu entorno:
 
+* [Node.js](https://nodejs.org/) (Versión 20 o superior recomendada)
+* [Git](https://git-scm.com/)
+* **pnpm** (Gestor de paquetes)
+    * Si no lo tienes, instálalo con: `npm install -g pnpm`
 
-## Getting Started
+## 🚀 Instalación
 
-With this library, you can build automated conversation flows agnostic to the WhatsApp provider, set up automated responses for frequently asked questions, receive and respond to messages automatically, and track interactions with customers. Additionally, you can easily set up triggers to expand functionalities limitlessly.
+Sigue estos pasos para desplegar el proyecto en tu entorno local o servidor:
 
-```
-npm create builderbot@latest
-```
+1.  **Clona el repositorio:**
+    ```bash
+    git clone [https://github.com/olico214/whatsapp-santaclaus.git](https://github.com/olico214/whatsapp-santaclaus.git)
+    ```
 
+2.  **Ingresa al directorio del proyecto:**
+    ```bash
+    cd whatsapp-santaclaus
+    ```
 
-## Documentation
+3.  **Instala las dependencias:**
+    ```bash
+    pnpm install
+    ```
 
-Visit [builderbot](https://builderbot.vercel.app/) to view the full documentation.
+## ⚙️ Configuración (Variables de Entorno)
 
+Es necesario crear un archivo de configuración para conectar tu instancia de Baileys con tu n8n.
 
-## Official Course
+1.  Crea un archivo llamado `.env` en la raíz del proyecto.
+2.  Copia y pega el siguiente contenido, sustituyendo los valores por los tuyos:
 
-If you want to discover all the functions and features offered by the library you can take the course.
-[View Course](https://app.codigoencasa.com/courses/builderbot?refCode=LEIFER)
-
-
-## Contact Us
-- [💻 Discord](https://link.codigoencasa.com/DISCORD)
-- [👌 𝕏 (Twitter)](https://twitter.com/leifermendez)
+```env
+PORT=3000
+URL=https://tu-n8n.com/webhook/tu-webhook-id](https://tu-n8n.com/webhook/tu-webhook-id
