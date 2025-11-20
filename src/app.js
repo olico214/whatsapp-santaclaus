@@ -33,7 +33,7 @@ function resolveUserJid(msg) {
 }
 
 
-const welcomeFlow = addKeyword(EVENTS.WELCOME).addAction({ capture: false }, async (ctx, { gotoFlow, flowDynamic, provider }) => {
+const welcomeFlow = addKeyword(EVENTS.WELCOME).addAction({ capture: false }, async (ctx, { endFlow, flowDynamic, provider }) => {
     const sender = resolveUserJid(ctx)
     const phone = sender.replace('@s.whatsapp.net', '')
     try {
@@ -51,6 +51,10 @@ const welcomeFlow = addKeyword(EVENTS.WELCOME).addAction({ capture: false }, asy
             })
         })
         const data = await res.json()
+        if (data.limite) {
+            await flowDynamic('Jo jo jo, lo siento, haz alcanzado el limite de mensajes por dia. 🎅');
+            return endFlow();
+        }
         const file = await procesarRespuesta(data)
 
         if (file) {
@@ -69,7 +73,7 @@ const welcomeFlow = addKeyword(EVENTS.WELCOME).addAction({ capture: false }, asy
 
 
 const voiceNoteFlow = addKeyword(EVENTS.VOICE_NOTE)
-    .addAction(async (ctx, { provider, flowDynamic }) => {
+    .addAction(async (ctx, { endFlow, provider, flowDynamic }) => {
         const localPath = await provider.saveFile(ctx, { path: 'assets' })
         const sender = resolveUserJid(ctx)
         const phone = sender.replace('@s.whatsapp.net', '')
@@ -90,6 +94,12 @@ const voiceNoteFlow = addKeyword(EVENTS.VOICE_NOTE)
                 body: formData
             })
             const data = await res.json()
+
+            if (data.limite) {
+                await flowDynamic('Jo jo jo, lo siento, haz alcanzado el limite de mensajes por dia. 🎅');
+                return endFlow();
+            }
+
             const file = await procesarRespuesta(data)
 
             if (file) {
