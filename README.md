@@ -55,22 +55,15 @@ http://localhost:PORT/
 
 Escanea el código QR desde tu WhatsApp:
 
-📦 Estructura del Proyecto
+## 📦 Estructura del Proyecto
+
+```bash
 whatsapp-santaclaus/
- ├── assets/
- │   └── connect.png
- ├── src/
- ├── .env.example
- ├── README.md
- ├── package.json
- └── pnpm-lock.yaml
-
-🛠️ Tecnologías Utilizadas
-
-Baileys – Cliente de WhatsApp Web
-
-Express – Servidor HTTP
-
-n8n – Orquestación con Webhooks
-
-pnpm – Gestor de paquetes
+├── 📂 assets/
+│   └── 🖼️ connect.png   # Imagen del QR generada
+├── 📂 src/              # Código fuente del bot
+├── 📄 .env              # Variables de entorno (no subir a git)
+├── 📄 .env.example      # Plantilla de variables
+├── 📄 package.json      # Dependencias y scripts
+├── 🔒 pnpm-lock.yaml    # Versiones exactas de pnpm
+└── 📝 README.md         # Documentación
