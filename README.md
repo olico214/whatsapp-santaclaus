@@ -1,50 +1,76 @@
-# WhatsApp SantaClaus 🎅🎄
+## 📱 WhatsApp SantaClaus 🎅🎄
 
-Aplicación modular para conectar **WhatsApp** (utilizando la librería Baileys) con flujos de automatización en **n8n**. Este servicio permite gestionar mensajes y reenviar eventos a través de webhooks.
+Aplicación modular para conectar WhatsApp (librería Baileys) con flujos automatizados en n8n.
+Permite recibir mensajes, procesarlos y reenviar eventos mediante webhooks.
 
 ## 📋 Requisitos Previos
 
-Antes de comenzar, asegúrate de tener instalado lo siguiente en tu entorno:
+Antes de comenzar, asegúrate de tener instalado:
 
-* [Node.js](https://nodejs.org/) (Versión 20 o superior recomendada)
-* [Git](https://git-scm.com/)
-* **pnpm** (Gestor de paquetes)
-    * Si no lo tienes, instálalo con: `npm install -g pnpm`
+Node.js (versión 20 o superior recomendada)
+
+Git
+
+pnpm
+
+Instalar:
+
+npm install -g pnpm
 
 ## ⚙️ Configuración (Variables de Entorno)
 
-Es necesario crear un archivo de configuración para conectar tu instancia de Baileys con tu n8n.
+Debes crear un archivo .env para conectar Baileys con n8n.
 
-1.  Crea un archivo llamado `.env` en la raíz del proyecto.
-2.  Copia y pega el siguiente contenido, sustituyendo los valores por los tuyos:
+En la raíz del proyecto, crea el archivo .env
 
-```env
+Agrega y modifica con tus valores:
+
 PORT=3000
 URL=https://tu-n8n.com/webhook/tu-webhook-id
 
 ## 🚀 Instalación
 
-Sigue estos pasos para desplegar el proyecto en tu entorno local o servidor:
+Sigue estos pasos para desplegar el proyecto:
 
-1.  **Clona el repositorio:**
-    ```bash
-    git clone https://github.com/olico214/whatsapp-santaclaus.git
-    ```
+1. Clonar el repositorio
+git clone https://github.com/olico214/whatsapp-santaclaus.git
 
-2.  **Ingresa al directorio del proyecto:**
-    ```bash
-    cd whatsapp-santaclaus
-    ```
+2. Entrar al directorio
+cd whatsapp-santaclaus
 
-3.  **Instala las dependencias:**
-    ```bash
-    pnpm install
-    ```
+3. Instalar dependencias
+pnpm install
 
 ## ▶️ Ejecución
-assets/connect.png
 
- Inicia el servicio con el siguiente comando:
- http://localhost:3008/
+Inicia el servicio:
 
- leer el codigo QR desde tu whatsapp
+pnpm start
+
+
+Luego abre en tu navegador:
+
+http://localhost:PORT/
+
+
+Escanea el código QR desde tu WhatsApp:
+
+📦 Estructura del Proyecto
+whatsapp-santaclaus/
+ ├── assets/
+ │   └── connect.png
+ ├── src/
+ ├── .env.example
+ ├── README.md
+ ├── package.json
+ └── pnpm-lock.yaml
+
+🛠️ Tecnologías Utilizadas
+
+Baileys – Cliente de WhatsApp Web
+
+Express – Servidor HTTP
+
+n8n – Orquestación con Webhooks
+
+pnpm – Gestor de paquetes
